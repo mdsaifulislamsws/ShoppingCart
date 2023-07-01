@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creating a Shopping Cart Application</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/custom.css">
+</head>
+
+<body id="cart-scroll" class="overflow-hidden h-screen">
+  <!-- header  -->
+  <div class="header flex items-center justify-between shadow-md px-20 sticky top-0 left-0 bg-white z-20">
+    <span class="title uppercase font-semibold text-lg text-gray-600">Shopping</span>
+    <div id="cartButton" class="relative py-2 cursor-pointer">
+      <div class="top-3 absolute left-3">
+        <p id="qty" class="flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-2.5 text-xs text-white">
+          0
+        </p>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="file: mt-4 h-6 w-6">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- container  -->
+  <div id="container" class="cart-scroll w-screen h-full overflow-auto mx-auto py-10 bg-gray-100">
+    <div id="cartWrapper"
+      class="mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"></div>
+  </div>
+
+  <!-- side bar box -->
+  <div id="prodectAddingBox"
+    class="fixed flex flex-col justify-center items-center top-0 left-[-460px] duration-200 z-20 w-[450px] h-full bg-slate-200 shadow-md">
+    <h2 class="uppercase py-2 font-semibold text-gray-500 bg-gray-200 w-full text-center shadow-md z-20">Your All Cart
+      Product</h2>
+    <ul id="cartProdectItem"
+      class="cart-scroll flex-1 overflow-auto w-full flex flex-col gap-3 border-b p-3 border-slate-300">
+    </ul>
+    <div class="actionButton w-full flex flex-col">
+      <p
+        class="bg-green-400 text-white mt-4 px-6 mb-3 py-2 w-[90%] mx-auto rounded-full flex items-center gap-3 font-semibold">
+        Total : TK<span>0</span>
+      </p>
+      <button
+        class="w-[90%] mx-auto bg-red-400 hover:bg-red-500 duration-200 mb-3 p-2 font-semibold rounded-full text-white">
+        Clear To Cart
+      </button>
+    </div>
+  </div>
+  <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>
