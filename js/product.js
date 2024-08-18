@@ -24,7 +24,7 @@ const productData = [
     id: 3,
     name: "Laptop Dell i3",
     dis: "Lorem ipsum dolor sit amet.",
-    img: "https://avatars.mds.yandex.net/i?id=bd5d1ac9b0d96fd2b7c0885e37ff27745787c0c3-9198173-images-thumbs&n=13",
+    img: "https://consumer.huawei.com/content/dam/huawei-cbg-site/en/support/laptop-user-guide/img/laptop.png",
     price: 35000,
   },
   {
